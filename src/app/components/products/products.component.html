@@ -1,0 +1,18 @@
+@if(!filteredCategoryProduct.length){
+<div class="spinner-wrapper">
+  <mat-spinner></mat-spinner>
+</div>
+} @else {
+<div class="wrapper">
+  @for (list of filteredCategoryProduct; track list) {
+  <div class="card" style="width: 18rem">
+    <img class="card-img-top" [src]="list.image" alt="{{list.title}}" />
+    <div class="card-body">
+      <h5 class="card-title">{{ list.title }}</h5>
+      <p class="card-text">{{ list.description }}</p>
+    </div>
+    <a (click)="viewDetails(list.id, list)" class="btn">View Details</a>
+  </div>
+  }
+</div>
+}

@@ -1,0 +1,18 @@
+@mixin d-flex-jc($justify-content, $align-items) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+@mixin d-flex-coloumn {
+    display: flex;
+    flex-direction: column;
+} 
+@mixin d-flex-center {
+    display: flex;
+    justify-content: center;
+} 
+@mixin d-flex-coloumn-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 

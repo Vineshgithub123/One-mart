@@ -1,0 +1,33 @@
+@import "src/assets/scss/main.scss";
+
+.category ::ng-deep{
+    .spinner-wrap {
+        @include d-flex-jc(center, center)
+    }
+    .mat-mdc-progress-spinner {
+        height: 20px !important;
+    }
+    .mdc-circular-progress__gap-patch {
+        display: none;
+    }
+    .category-wrap {
+        @include d-flex-jc(space-around, center);
+        background-color: $blue-100;
+        height: 35px;
+        color: $light-color;
+        text-transform: capitalize;
+        span {
+            width: 25%;
+            @include d-flex-jc(center, center);
+            height: 100%;
+            &.active {
+                color: $dark-color;
+                cursor: pointer;
+                background-color: $light-01;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

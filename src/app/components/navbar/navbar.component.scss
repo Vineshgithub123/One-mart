@@ -1,0 +1,46 @@
+@import "src/assets/scss/main.scss";
+
+.navbar {
+    background: linear-gradient(166deg, $blue-01, transparent);
+    display: flex;
+    height: 77px;
+    .search-bar {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    input {
+        border: 1px solid $primary-color;
+        width: 60%;
+        height: 32px;
+        border-radius: 25px;
+        border: none;
+        padding: 20px;
+        outline: none;
+    }
+    img {
+        height: 100%;
+        width: auto;
+    }
+    .right {
+        display: flex;
+        gap: 24px;
+        height: 44px;
+        width: auto;
+        .cart {
+            position: relative;
+        }
+        .badge {
+            position: absolute;
+            top: 18px;
+            color: $light-color;
+            right: 102px;
+            background-color: $primary-color;
+        }
+        img {
+            height: 47px;
+            border-radius: 50%;
+            padding: 5px;
+        }
+    }
+}

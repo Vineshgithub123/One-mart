@@ -1,0 +1,54 @@
+@import "src/assets/scss/main.scss";
+
+.profile-wrap {
+    height: 100%;
+    @include d-flex-center;
+    align-self: center;
+    .profile {
+        max-width: 500px;
+        height: max-content;
+        align-self: center;
+        padding: 30px;
+        background-color: $blue-02;
+        box-shadow: 3px 4px $dark-02;
+        border-radius: 20px;
+        .image {
+            @include d-flex-coloumn;
+            align-items: center;
+            img {
+                height: 139px;
+                width: auto;
+                padding: 2px;
+                border-radius: 50%;
+                margin-bottom: 20px;
+            }
+            input[type="file"] {
+                display: none;
+            }
+            .custom-file-upload {
+                @include d-flex-jc(center, center);
+                padding: 6px 12px;
+                cursor: pointer;
+                height: 32px;
+                width: 83%;
+                border-radius: 12px;
+                height: 28px;
+                border: none;
+                background-color: $red-01;
+                color: $light-color;
+            }
+        }
+        .details {
+            @include d-flex-coloumn-center;
+            .save-btn {
+                margin: 0 20px 20px 20px;
+                background-color: $blue-100;
+                color: $light-color;
+                display: flex;
+                justify-content: center;
+                padding: 7px;
+                border-radius: 10px;
+            }
+        }
+    }
+}

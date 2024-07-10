@@ -1,0 +1,13 @@
+<div class="cart-wrapper">
+  @for (list of filteredProductInCart; track list) {
+  <div class="card" style="width: 18rem">
+    <img class="card-img-top" [src]="list.image" alt="{{ list.title }}" />
+    <div class="card-body">
+      <h5 class="card-title">{{ list.title }}</h5>
+      <p class="card-text">{{ list.description }}</p>
+    </div>
+    <a (click)="remove($index)" class="btn">Remove from Cart</a>
+  </div>
+  }
+</div>
+<div *ngIf="!productInCart.length" class="no-cart">Oops!! No Items in Cart.</div>

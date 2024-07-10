@@ -1,0 +1,45 @@
+@import "src/assets/scss/main.scss";
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    .card {
+        margin-left: 50px;
+        box-shadow: 10px 5px 10px $dark-01;
+        margin-top: 120px;
+        &:hover {
+            transform: scale(1.04);
+            transition: 0.1s;
+        }
+        img {
+            height: 200px;
+            object-fit: contain;
+            padding: 20px;
+        }
+        .card-body {
+            @include d-flex-coloumn;
+            justify-content: space-evenly;
+            .card-title {
+                font-size: larger;
+                font-family: sans-serif;
+                font-weight: 600;
+            }
+            .card-text {
+                overflow-y: scroll;
+                height: 200px;
+                scrollbar-width: thin;
+            }
+        }
+        a {
+            margin: 0 20px 20px 20px;
+            background-color: $blue-100;
+            color: $light-color;
+        }
+    }
+}
+.spinner-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

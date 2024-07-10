@@ -1,0 +1,20 @@
+@if(!response) {
+<mat-spinner></mat-spinner>
+}@else {
+  <div class="product-detail-wrap">
+    <h2 mat-dialog-title>{{ productDetail.title }}</h2>
+    <span class="price">${{ productDetail.price }}</span>
+    <mat-dialog-content>
+      <div class="product-image"><img [src]="productDetail.image" alt="" /></div>
+    </mat-dialog-content>
+    <div class="rating">
+      <span>Rating:{{ productDetail.rating.rate }}</span>
+      <span>Count:{{ productDetail.rating.count }}</span>
+    </div>
+    <div class="description">{{productDetail.description}}</div>
+    <mat-dialog-actions>
+      <button mat-button class="close" [mat-dialog-close]="'close'" cdkFocusInitial>Cancel</button>
+      <button mat-button class="add" (click)="addToCart()">Add to cart</button>
+    </mat-dialog-actions>
+  </div>
+}

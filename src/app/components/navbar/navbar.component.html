@@ -1,0 +1,28 @@
+<div class="navbar">
+  <img
+    [src]="imagePath + imageName.ONE_MART"
+    alt="OneMart Logo"
+    aria-label="OneMart - Go to the homepage"
+  />
+  <div class="search-bar">
+    <input type="search" (input)="search($event)" [placeholder]="'Search for '+ currentUrlId ?? ''" />
+  </div>
+  <div class="right">
+    <img
+      class="cart"
+      [src]="imagePath + imageName.CART"
+      alt="Cart"
+      aria-label="View your shopping cart"
+      (click)="moveToCart()"
+    />
+    @if(cartCount !== 0) {
+    <span class="badge">{{ cartCount }}</span>
+    }
+    <img
+      [src]="imagePath + imageName.DEFAULT_AVATAR"
+      alt="Profile"
+      aria-label="Open your profile settings"
+      (click)="moveToProfile()"
+    />
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="category">
+  @if(!categories.length){
+  <div class="spinner-wrap">
+    <mat-spinner></mat-spinner>
+  </div>
+  } @else {
+  <div class="category-wrap">
+    @for(list of categories; track list){
+    <span (click)="getCategorizedProduct(list)" [ngClass]="{'active': currentUrlId === list}">{{ list }}</span>
+    }
+  </div>
+  }
+</div>
